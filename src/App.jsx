@@ -16,8 +16,10 @@ export function About(){
 function App() {
   return (
     <BrowserRouter>
-      <Link to="/">Home</Link>
-      <Link to="/about">About</Link>
+    <nav className='m-5 flex gap-10 font-semibold text-lg '>
+      <Link className='hover:underline hover:text-purple-500' to="/">Home</Link>
+      <Link className='hover:underline hover:text-purple-500' to="/about">About</Link>
+    </nav>
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
