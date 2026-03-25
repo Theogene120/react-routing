@@ -1,15 +1,14 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, NavLink } from "react-router-dom";
 
 function Layout() {
   return (
     <>
       {/* Navbar */}
       <nav className='m-5 flex gap-10 font-semibold text-lg'>
-        <Link className='hover:underline hover:text-purple-500' to="/">Home</Link>
-        <Link className='hover:underline hover:text-purple-500' to="/about">About</Link>
-        <Link className='hover:underline hover:text-purple-500' to="/contact">Contact</Link>
-        <Link className='hover:underline hover:text-purple-500' to="/product">Product</Link>
-        
+        <NavLink className={({isActive}) => isActive ? "text-purple-500" : "hover:underline"} to="/">Home</NavLink>
+        <NavLink className={({isActive}) => isActive ? "text-purple-500" : "hover:underline"} to="/about">About</NavLink>
+        <NavLink className={({isActive}) => isActive ? "text-purple-500" : "hover:underline"} to="/contact">Contact</NavLink>
+        <NavLink className={({isActive}) => isActive ? "text-purple-500" : "hover:underline"} to="/product">Product</NavLink>
       </nav>
 
       {/* THIS is where pages will appear */}

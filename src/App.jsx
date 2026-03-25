@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, Outlet, NavLink } from 'react-router-dom'
 import Layout from './Layout'
 
 export function Home(){
@@ -36,8 +36,8 @@ export function Product(){
     <div>
     <h1 className="text-center text-2xl font-extrabold"> This is Produnct page </h1>
     <nav className='m-5 flex gap-10 font-semibold text-lg'>
-      <Link className='hover:underline hover:text-purple-500' to='/product/car'>Cars</Link>
-      <Link className='hover:underline hover:text-purple-500' to='/product/bike'>Bikes</Link>
+      <NavLink className={({isActive}) => isActive ? "text-purple-500" : "hover:underline"} to='/product/car'>Cars</NavLink>
+      <NavLink className={({isActive}) => isActive ? "text-purple-500" : "hover:underline"} to='/product/bike'>Bikes</NavLink>
     </nav>
     <Outlet />
     </div>
