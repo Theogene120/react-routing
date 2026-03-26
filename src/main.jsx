@@ -3,11 +3,12 @@ import React from 'react'
 import App from './App'
 import { About } from './App'
 import URLParams from './URLParams'
+import CustomHook from './CustomHook'
 
 
 
 createRoot(document.getElementById('root')).render(
-  <Test />
+  <CustomHook />
 )
 
 
