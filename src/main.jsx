@@ -8,7 +8,7 @@ import CustomHook from './CustomHook'
 
 
 createRoot(document.getElementById('root')).render(
-  <CustomHook />
+  <App />
 )
 
 
