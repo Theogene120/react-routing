@@ -7,22 +7,21 @@ import URLParams from './URLParams'
 
 
 createRoot(document.getElementById('root')).render(
-  <App />
+  <Test />
 )
 
 
-import { useState, useMemo } from "react";
 
 function Test() {
-  const [count, setCount] = useState(0);
-  const [text, setText] = useState("");
+  const [count, setCount] = React.useState(0);
+  const [text, setText] = React.useState("");
 
   const expensiveCalculation = (num) => {
     console.log("Calculating...");
     return num * 2;
   };
 
-  const result = useMemo(() => {
+  const result = React.useMemo(() => {
     return expensiveCalculation(count);
   }, [count]);
 
