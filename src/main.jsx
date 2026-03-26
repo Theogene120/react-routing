@@ -7,7 +7,7 @@ import URLParams from './URLParams'
 
 
 createRoot(document.getElementById('root')).render(
-  <Test />
+  <App />
 )
 
 
