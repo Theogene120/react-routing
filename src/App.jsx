@@ -62,7 +62,7 @@ function App() {
         <Route path="/" element={<Layout />}>
 
         {/* Index route (default page) */}
-        <Route index element={<Home />} />
+        <Route index end element={<Home />} />
 
         {/* Other pages */}
         <Route path="about" element={<About />} />
