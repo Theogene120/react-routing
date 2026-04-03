@@ -73,6 +73,7 @@ function App() {
         </Route>
 
         </Route>
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </BrowserRouter>
   )
