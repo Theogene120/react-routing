@@ -1,5 +1,11 @@
 import { BrowserRouter, Routes, Route, Link, Outlet, NavLink } from 'react-router-dom'
 import Layout from './Layout'
+import { lazy, Suspense } from 'react'
+
+
+const About = lazy(() => import('./components/About'))
+const Contact = lazy(() => import('./components/Contact'))
+
 
 export function Home(){
   return (
@@ -45,24 +51,26 @@ export function Product(){
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        {/* Layout wraps all pages */}
-        <Route path="/" element={<Layout />}>
+      <Suspense fallback={<div>Loading .....</div>}>
+        <Routes>
+          {/* Layout wraps all pages */}
+          <Route path="/" element={<Layout />}>
 
-        {/* Index route (default page) */}
-        <Route index end element={<Home />} />
+          {/* Index route (default page) */}
+          <Route index element={<Home />} />
 
-        {/* Other pages */}
-        <Route path="about" element={<About />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="product" element={<Product />}>
-          <Route path='car' element={<Cars />} />
-          <Route path='bike' element={<Bikes />} />
-        </Route>
+          {/* Other pages */}
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="product" element={<Product />}>
+            <Route path='car' element={<Cars />} />
+            <Route path='bike' element={<Bikes />} />
+          </Route>
 
-        </Route>
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+          </Route>
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   )
 }
