@@ -4,11 +4,12 @@ import App from './App'
 import { About } from './App'
 import URLParams from './URLParams'
 import CustomHook from './CustomHook'
+import { useNavigate } from 'react-router-dom'
 
 
 
 createRoot(document.getElementById('root')).render(
-  <App />
+  <URLParams />
 )
 
 
@@ -33,4 +34,14 @@ function Test() {
       <input className='ml-2 border border-black outline-none' value={text} onChange={(e) => setText(e.target.value)} />
     </>
   );
+}
+
+function LogIn() {
+  const navigate = useNavigate()
+  
+  function handleSubmit(e) {
+    e.preventDefault()
+    // different logic
+    navigate('/dashboard', {relative: true})
+  }
 }
