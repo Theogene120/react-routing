@@ -9,7 +9,7 @@ function CalculateWithMemo() {
         setCount(prev => [...prev, prev[prev.length-1] + 1])
     }
 
-    let sum = React.useMemo(() =>{
+    let sum = React.useCallback(() => {
         console.log('Calculating sum...')
         return count.reduce((sum, num) => sum + num, 0)
     }, [count])
@@ -17,7 +17,7 @@ function CalculateWithMemo() {
     return(
         <>
             <p>{count.join(', ')}</p>
-            <p>Sum = {sum}</p>
+            <p>Sum = {sum()}</p>
             <button onClick={handleClick}>Click to increase</button>
             
         </>  

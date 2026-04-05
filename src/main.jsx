@@ -13,7 +13,7 @@ import CalculateWithMemo from './Hooks/useMemoHook'
 
 
 createRoot(document.getElementById('root')).render(
-  <CalculateWithMemo />
+  <CustomHook />
 )
 
 
