@@ -1,24 +1,24 @@
-import { useState } from "react"
+import React , { useState } from "react"
 
 function Search(){
-    const [text, setText] = useState('')
+    const [text, setText] = useState('Type in above input')
     
     function handleInput(e){
-        let input = e.currentTarget
+        let input = e.currentTarget.value
         setText(input)
     }
 
+    let search = React.useCallback(() => {
+        console.log('Search for:', text)
+    }, [text])    
+
     return(
         <div>
-            <input onChange={(e) => handleInput(e)} className="border border-black outline-none" type="text" />
-            <p>{text}</p>
+            <input onChange={handleInput} className="border border-black outline-none" type="text" />
+            <button onClick={search}>Search</button>
         </div>
     )
     
 }
-
-// function Text(){
-    
-// }
 
 export default Search
