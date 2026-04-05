@@ -8,11 +8,12 @@ import Component1 from './Hooks/ContextHook'
 import Timer from './Hooks/UseRefHook'
 import Counter from './Hooks/UseReducerHook'
 import Search from './Hooks/UseCallbackHook'
+import CalculateWithMemo from './Hooks/useMemoHook'
 
 
 
 createRoot(document.getElementById('root')).render(
-  <Search />
+  <CalculateWithMemo />
 )
 
 
