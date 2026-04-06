@@ -9,11 +9,12 @@ import Timer from './Hooks/UseRefHook'
 import Counter from './Hooks/UseReducerHook'
 import Search from './Hooks/UseCallbackHook'
 import CalculateWithMemo from './Hooks/useMemoHook'
+import Custom from './Hooks/CustomHook2'
 
 
 
 createRoot(document.getElementById('root')).render(
-  <CustomHook />
+  <Custom />
 )
 
 
