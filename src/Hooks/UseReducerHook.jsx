@@ -15,7 +15,7 @@ function Counter(){
     return (
         <div>
             <p>Count : {state.count}</p>
-            <div className="flex gag-6">
+            <div className="flex gap-4">
                 <button className="text-3xl font-bold" onClick={() => dispatch({type: 'increment'})}>+</button>
                 <button className="text-3xl font-bold" onClick={() => dispatch({type: 'decrement'})}>-</button>
                 <button className="text-3xl font-bold" onClick={() => dispatch({type: 'reset'})}>reset</button>

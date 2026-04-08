@@ -1,4 +1,8 @@
 import { createRoot } from 'react-dom/client'
+import { configureStore } from '@reduxjs/toolkit'
+import { Provider } from 'react-redux'
+
+import './index.css'
 import React from 'react'
 import App from './App'
 import URLParams from './URLParams'
@@ -10,11 +14,16 @@ import Counter from './Hooks/UseReducerHook'
 import Search from './Hooks/UseCallbackHook'
 import CalculateWithMemo from './Hooks/useMemoHook'
 import Custom from './Hooks/CustomHook2'
+import AppRedux from './AppRedux'
 
-
+const store = configureStore({
+  reducer: {}
+})
 
 createRoot(document.getElementById('root')).render(
-  <Custom />
+  <Provider store={store}>
+    <AppRedux />
+  </Provider>
 )
 
 
