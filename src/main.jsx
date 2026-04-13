@@ -27,7 +27,7 @@ const store = configureStore({
 
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
-    <AppRedux />
+    <Custom />
   </Provider>
 )
 
