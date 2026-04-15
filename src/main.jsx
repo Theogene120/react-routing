@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 
 import './index.css'
-import React from 'react'
+import React, { StrictMode } from 'react'
 import App from './App'
 import URLParams from './URLParams'
 import CustomHook from './CustomHook'
@@ -19,16 +19,25 @@ import Custom from './Hooks/CustomHook2'
 import AppRedux from './AppRedux'
 import userReducer from './feactures/user'
 
+
+import Theme from './Theme'
+
 const store = configureStore({
   reducer: {
     user: userReducer,
   }
 })
 
+// createRoot(document.getElementById('root')).render(
+//   <Provider store={store}>
+//     <CalculateWithMemo />
+//   </Provider>
+// )
+
 createRoot(document.getElementById('root')).render(
-  <Provider store={store}>
-    <CalculateWithMemo />
-  </Provider>
+  <StrictMode>
+    <Theme />
+  </StrictMode>
 )
 
 
