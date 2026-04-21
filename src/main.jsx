@@ -31,17 +31,17 @@ const store = configureStore({
   }
 })
 
-// createRoot(document.getElementById('root')).render(
-//   <Provider store={store}>
-//     <AppRedux />
-//   </Provider>
-// )
-
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Theme />
-  </StrictMode>
+  <Provider store={store}>
+    <AppRedux />
+  </Provider>
 )
+
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <Theme />
+//   </StrictMode>
+// )
 
 
 
