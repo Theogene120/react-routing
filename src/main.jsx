@@ -23,11 +23,13 @@ import { configureStore } from '@reduxjs/toolkit'
 import { Provider } from 'react-redux'
 import AppRedux from './AppRedux'
 import userReducer from './feactures/user'
+import themeReducer from './feactures/theme'
 
 
 const store = configureStore({
   reducer: {  // function that hold information of current state and the action that will be implemented on that state
     user: userReducer,
+    theme: themeReducer
   }
 })
 
