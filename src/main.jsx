@@ -39,11 +39,11 @@ createRoot(document.getElementById('root')).render(
   </Provider>
 )
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <Theme />
-  </StrictMode>
-)
+// createRoot(document.getElementById('root')).render(
+//   <StrictMode>
+//     <Theme />
+//   </StrictMode>
+// )
 
 
 
