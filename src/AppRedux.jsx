@@ -1,5 +1,6 @@
 import Login from "./pages/Login"
 import Profile from "./pages/Profile"
+import ChangeColor from "./pages/ChangeColor"
 
 
 function AppRedux() {
@@ -7,6 +8,7 @@ function AppRedux() {
         <div>
             <Profile />
             <Login />
+            <ChangeColor />
         </div>
     )
 }
